@@ -17,7 +17,7 @@ export const posts = [
     readTime: 6,
     hero: { alt: "A quiet street with wet pavement and reflections", caption: "After rain, the city becomes a mirror with footnotes." },
     content: [
-      "<p>There’s a brief interval after rain when the city feels as if someone has turned down the contrast. Edges soften. The asphalt holds light like a memory. Even distant traffic sounds closer, less sharp — edited.</p>",
+      "<p>There’s a brief interval after rain when the city feels as if someone has turned down the contrast. Edges soften. The asphalt holds light like a memory. Even distant traffic sounds closer, less sharp , edited.</p>",
       "<p>Walking then is like reading a text that has been gently revised: fewer exclamation points, more commas. You notice small transitions. The change of tile to stone. The way a gutter carries a thin ribbon of water toward a drain.</p>",
       "<blockquote>After rain, the city doesn’t become romantic. It becomes legible.</blockquote>",
       "<p>Try this: pause at a corner, not to cross, but to listen. Footsteps on wet pavement have a slightly lower pitch. Umbrellas add a soft percussion. A bus sighs. A bicycle passes like a sentence ending.</p>",
@@ -51,7 +51,7 @@ export const posts = [
     hero: { alt: "A teacup beside a small teapot", caption: "Time, but gentler." },
     content: [
       "<p>We tell time with alarms, calendars, and the bluntness of deadlines. Tea tells time with fragrance.</p>",
-      "<p>The first minute is sharp and bright. The next two are rounder. Somewhere around four, the bitterness recedes and something quieter arrives — the leaf’s longer story.</p>",
+      "<p>The first minute is sharp and bright. The next two are rounder. Somewhere around four, the bitterness recedes and something quieter arrives , the leaf’s longer story.</p>",
       "<pre><code>// A tiny ritual
 // 1) Boil water
 // 2) Pour
@@ -149,7 +149,7 @@ export const posts = [
     content: [
       "<p>Some cafés are built for turnover. Others are built for attention.</p>",
       "<p>Listen for the soundscape: not quiet, but considerate. Chairs that don’t screech. Music that doesn’t demand. Light that makes your page readable.</p>",
-      "<p>When a café feels like a library, it’s because everyone is cooperating — unintentionally — in the same mood.</p>"
+      "<p>When a café feels like a library, it’s because everyone is cooperating , unintentionally , in the same mood.</p>"
     ],
     tags: ["Spaces", "Reading", "Community"]
   },
@@ -163,7 +163,7 @@ export const posts = [
     hero: { alt: "A folded paper map on a table", caption: "A map is a suggestion, not a command." },
     content: [
       "<p>There’s a kind of freedom in being just a little unsure of where you are.</p>",
-      "<p>Not the panic of truly lost — the mild uncertainty that makes you look up. A street name becomes interesting. A doorway becomes a question.</p>",
+      "<p>Not the panic of truly lost , the mild uncertainty that makes you look up. A street name becomes interesting. A doorway becomes a question.</p>",
       "<p>Leave your map in your pocket for ten minutes. See what your attention chooses when it isn’t being managed.</p>"
     ],
     tags: ["Navigation", "Curiosity", "Streets"]
@@ -179,7 +179,7 @@ export const posts = [
     content: [
       "<p>Try shelving by mood: books that comfort, books that sharpen, books that untie knots.</p>",
       "<p>It’s less efficient and more revealing. You’ll learn what you reach for when you’re tired, restless, or hungry for change.</p>",
-      "<p>Sometimes the point of organizing is not retrieval — it’s recognition.</p>"
+      "<p>Sometimes the point of organizing is not retrieval , it’s recognition.</p>"
     ],
     tags: ["Books", "Home", "Systems"]
   },
