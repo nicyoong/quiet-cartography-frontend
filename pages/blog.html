@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Blog · Quiet Cartography</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="description" content="Quiet Cartography — minimal editorial blog demo (frontend-only)." />
+
+  <!-- Optional fonts (safe for GitHub Pages). If you prefer fully offline, remove these lines. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,350;8..60,400;8..60,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/reset.css" />
+  <link rel="stylesheet" href="/assets/css/variables.css" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/dark.css" />
+
+  <script>
+    // Prevent theme flash (runs before modules)
+    (function() {
+      try {
+        var stored = localStorage.getItem("qc-theme");
+        var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var theme = (stored === "light" || stored === "dark") ? stored : (prefersDark ? "dark" : "light");
+        document.documentElement.dataset.theme = theme;
+      } catch(e) {}
+    })();
+  </script>
+
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/index.html" aria-label="Home">
+      <span class="mark" aria-hidden="true"></span>
+      <span class="title" data-site-name>Quiet Cartography</span>
+      <span class="tag">· <span data-site-tagline></span></span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="/index.html">Home</a>
+      <a href="/pages/blog.html">Blog</a>
+      <a href="/pages/about.html">About</a>
+      <a href="/pages/projects.html">Projects</a>
+      <a href="/pages/contact.html">Contact</a>
+    </nav>
+
+    <button class="btn ghost" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle theme">
+      <span class="icon" aria-hidden="true">☾</span>
+      <span class="small"><span data-theme-label>Light</span> mode</span>
+    </button>
+  </div>
+</header>
+
+
+<main class="container fade-in">
+  <header class="content page-title">
+    <div class="eyebrow">Writing</div>
+    <h1>Notes for slow looking.</h1>
+    <p class="lede">Filter by category or search by phrase. Posts are generated from a small JS dataset to simulate a CMS-powered blog.</p>
+  </header>
+
+  <section class="content">
+    <div class="controls" aria-label="Blog controls">
+      <label class="input" aria-label="Search posts">
+        <span class="icon" aria-hidden="true">⌕</span>
+        <input type="search" placeholder="Search titles, tags, excerpts…" data-search-input />
+      </label>
+
+      <label class="small" for="category" style="display:flex; align-items:center; gap: var(--s1);">
+        <span class="faint">Category</span>
+        <select class="select" id="category" data-category-select aria-label="Select category"></select>
+      </label>
+
+      <span class="small faint" aria-live="polite"><span data-result-count>0 posts</span></span>
+    </div>
+
+    <div class="list" data-post-list>
+      <noscript>
+        <div class="card">
+          <div class="kicker">JavaScript required</div>
+          <p class="lede">This demo renders blog posts from a JS dataset. Enable JavaScript to view the list.</p>
+        </div>
+      </noscript>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="small">
+      <span data-site-name>Quiet Cartography</span> · Frontend-only demo · <span class="faint">No CMS, no tracking.</span>
+    </div>
+    <div class="footer-links small">
+      <a class="link" href="/pages/blog.html">Writing</a>
+      <a class="link" href="/pages/contact.html">Contact</a>
+      <a class="link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+<script type="module" src="/assets/js/main.js"></script>
+
+</body>
+</html>
