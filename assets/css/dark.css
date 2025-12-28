@@ -1,0 +1,7 @@
+/* Dark-mode specific micro-tweaks */
+[data-theme="dark"] header.site-header {
+  background: color-mix(in oklab, var(--bg) 70%, transparent);
+}
+[data-theme="dark"] .btn { box-shadow: none; }
+[data-theme="dark"] .card { box-shadow: none; }
+[data-theme="dark"] pre { background: #0e1118; }

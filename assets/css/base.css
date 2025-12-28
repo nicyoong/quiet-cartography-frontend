@@ -1,0 +1,95 @@
+html, body { height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-serif);
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  transition: background var(--t-med) var(--ease), color var(--t-med) var(--ease);
+}
+
+::selection { background: var(--selection); }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin: 0 0 var(--s2);
+}
+
+h1 { font-size: clamp(2rem, 1.4rem + 2.2vw, 3.1rem); }
+h2 { font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem); }
+h3 { font-size: 1.15rem; }
+
+p { margin: 0 0 var(--s3); color: var(--text); }
+p.lede { font-size: 1.05rem; color: var(--muted); }
+
+small, .small { font-size: 0.92rem; color: var(--muted); }
+.muted { color: var(--muted); }
+.faint { color: var(--faint); }
+
+a.link {
+  text-decoration: none;
+  position: relative;
+  color: var(--text);
+}
+a.link::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -0.12em;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.25;
+  transform: scaleX(0.92);
+  transform-origin: left;
+  transition: opacity var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+}
+a.link:hover::after, a.link:focus-visible::after {
+  opacity: 0.7;
+  transform: scaleX(1);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--border);
+  margin: var(--s5) 0;
+}
+
+kbd {
+  font-family: var(--font-sans);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-bottom-color: rgba(0,0,0,0.18);
+  padding: 0.1rem 0.35rem;
+  border-radius: 8px;
+  font-size: 0.9em;
+}
+
+code, pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+pre {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--s3);
+  overflow: auto;
+  margin: var(--s4) 0;
+}
+
+blockquote {
+  margin: var(--s4) 0;
+  padding: var(--s2) var(--s3);
+  border-left: 3px solid var(--accent);
+  background: linear-gradient(90deg, var(--accent-weak), transparent);
+  border-radius: 12px;
+  color: var(--muted);
+}

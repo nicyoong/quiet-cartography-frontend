@@ -1,0 +1,109 @@
+.container { max-width: var(--container); margin: 0 auto; padding: 0 var(--s3); }
+.content { max-width: var(--content); }
+
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  background: color-mix(in oklab, var(--bg) 76%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s2);
+  padding: var(--s2) 0;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s1);
+}
+.brand .mark {
+  width: 10px; height: 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-weak);
+}
+.brand .title {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-size: 1rem;
+}
+.brand .tag {
+  display: none;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+@media (min-width: 720px) {
+  .brand .tag { display: inline; }
+}
+
+nav.site-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+}
+nav.site-nav a {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--muted);
+  padding: 0.35rem 0.4rem;
+  border-radius: 10px;
+  transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
+}
+nav.site-nav a[aria-current="page"] {
+  color: var(--text);
+  background: var(--surface-2);
+}
+
+main { padding: var(--s6) 0; }
+.section { padding: var(--s6) 0; }
+.section.tight { padding: var(--s4) 0; }
+
+.grid {
+  display: grid;
+  gap: var(--s3);
+}
+.grid.two {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 860px) {
+  .grid.two { grid-template-columns: 1.3fr 1fr; gap: var(--s5); }
+}
+
+footer.site-footer {
+  border-top: 1px solid var(--border);
+  padding: var(--s5) 0;
+  color: var(--muted);
+}
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-links { display: flex; gap: var(--s2); flex-wrap: wrap; }
+
+.page-title { margin-bottom: var(--s4); }
+.page-title .eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--faint);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.fade-in {
+  animation: fadeIn 420ms var(--ease) both;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
