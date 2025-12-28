@@ -10,7 +10,7 @@ function setActiveNav() {
   });
 }
 
-// Slightly refined “hide on scroll down”
+// Slightly refined "hide on scroll down"
 function initNavScroll() {
   const header = document.querySelector("header.site-header");
   if (!header) return;
