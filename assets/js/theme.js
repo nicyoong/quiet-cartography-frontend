@@ -30,11 +30,15 @@ export function initTheme() {
   const toggle = document.querySelector("[data-theme-toggle]");
   if (toggle) {
     toggle.addEventListener("click", () => {
+      console.log("CLICK");
+      console.log("before:", document.documentElement.dataset.theme);
+
       const next =
-        document.documentElement.dataset.theme === "dark"
-          ? "light"
-          : "dark";
+        document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+
       applyTheme(next);
+
+      console.log("after:", document.documentElement.dataset.theme);
     });
   }
 }
