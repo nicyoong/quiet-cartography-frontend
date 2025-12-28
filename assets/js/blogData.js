@@ -3,7 +3,7 @@
 
 export const site = {
   name: "Quiet Cartography",
-  tagline: "Notes on walking, rooms, tea, and the small geometry of cities.",
+  tagline: "Notes on walking, tea, and the small geometry of cities.",
   author: "Mira Ashdown"
 };
 
@@ -52,12 +52,12 @@ export const posts = [
     content: [
       "<p>We tell time with alarms, calendars, and the bluntness of deadlines. Tea tells time with fragrance.</p>",
       "<p>The first minute is sharp and bright. The next two are rounder. Somewhere around four, the bitterness recedes and something quieter arrives , the leaf’s longer story.</p>",
-      "<pre><code>// A tiny ritual
-// 1) Boil water
-// 2) Pour
-// 3) Wait
-// 4) Return to yourself
-</code></pre>",
+      `<pre><code>// A tiny ritual
+      // 1) Boil water
+      // 2) Pour
+      // 3) Wait
+      // 4) Return to yourself
+      </code></pre>`,
       "<p>There’s nothing efficient about it. That’s the point. When you steep, you practice not intervening.</p>"
     ],
     tags: ["Rituals", "Time", "Kitchen"]
