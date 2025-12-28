@@ -18,20 +18,23 @@ export function applyTheme(theme) {
 }
 
 export function initTheme() {
-  applyTheme(getPreferredTheme());
+  const stored = localStorage.getItem(storageKey);
 
-  // Update if system changes and user hasn't explicitly chosen
-  const mq = window.matchMedia("(prefers-color-scheme: dark)");
-  mq.addEventListener?.("change", () => {
-    const stored = localStorage.getItem(storageKey);
-    if (!stored) applyTheme(getPreferredTheme());
-  });
+  // Apply once on load
+  if (stored === "light" || stored === "dark") {
+    applyTheme(stored);
+  } else {
+    applyTheme(getPreferredTheme());
+  }
 
   const toggle = document.querySelector("[data-theme-toggle]");
   if (toggle) {
     toggle.addEventListener("click", () => {
-      const current = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
-      applyTheme(current === "dark" ? "light" : "dark");
+      const next =
+        document.documentElement.dataset.theme === "dark"
+          ? "light"
+          : "dark";
+      applyTheme(next);
     });
   }
 }
