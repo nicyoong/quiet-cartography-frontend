@@ -18,27 +18,19 @@ export function applyTheme(theme) {
 }
 
 export function initTheme() {
+  console.log("initTheme running");
   const stored = localStorage.getItem(storageKey);
-
-  // Apply once on load
   if (stored === "light" || stored === "dark") {
     applyTheme(stored);
   } else {
     applyTheme(getPreferredTheme());
   }
-
   const toggle = document.querySelector("[data-theme-toggle]");
   if (toggle) {
     toggle.addEventListener("click", () => {
-      console.log("CLICK");
-      console.log("before:", document.documentElement.dataset.theme);
-
       const next =
         document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-
       applyTheme(next);
-
-      console.log("after:", document.documentElement.dataset.theme);
     });
   }
 }
